@@ -93,6 +93,7 @@
             this.lblInventory.Size = new System.Drawing.Size(249, 223);
             this.lblInventory.TabIndex = 4;
             this.lblInventory.Text = "n/a";
+            this.lblInventory.Click += new System.EventHandler(this.lblInventory_Click);
             // 
             // label4
             // 

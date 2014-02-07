@@ -13,7 +13,7 @@ namespace Projektarbete
 {
     public partial class Inventory : Form
     {
-        public Item item { get; private set; }
+        public Item Item { get; private set; }
 
         public Inventory()
         {
@@ -37,10 +37,15 @@ namespace Projektarbete
 
         private void lstInventory_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //lstInventory.SelectedIndices.Count
-            //lstInventory.SelectedIndices[0]
-            //Game.Player.Inventory[index]
-            //Item = Game.Player.Inventory[index];
+
+            if (lstInventory.SelectedIndices.Count > 0)
+            {
+                int index = lstInventory.SelectedIndices[0];
+                Item = Game.Player.Inventory[index];
+            }
+
+            else
+                Item = null;
         }
 
     }

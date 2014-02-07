@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.lstInventory = new System.Windows.Forms.ListView();
-            this.btnOK = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnOK = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,6 +59,27 @@
             this.lstInventory.UseCompatibleStateImageBehavior = false;
             this.lstInventory.View = System.Windows.Forms.View.Details;
             this.lstInventory.SelectedIndexChanged += new System.EventHandler(this.lstInventory_SelectedIndexChanged);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Name";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Health";
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "AttakPower";
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Speed";
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "CriticalHitChance";
+            this.columnHeader5.Width = 118;
             // 
             // btnOK
             // 
@@ -86,26 +107,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(371, 276);
             this.tableLayoutPanel1.TabIndex = 2;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Name";
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Health";
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "AttakPower";
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Speed";
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "CriticalHitChance";
             // 
             // Inventory
             // 

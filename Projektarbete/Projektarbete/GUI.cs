@@ -16,7 +16,9 @@ namespace Projektarbete
         public GUI()
         {
             InitializeComponent();
+            Game.Player.Inventory.Add(new Item("Test", "", 0, 0, 0, 0));
             Fillup();
+            
         }
 
         private void btnAnswer1_Click(object sender, EventArgs e)
@@ -38,6 +40,11 @@ namespace Projektarbete
         {
             Inventory inventory = new Inventory();
             inventory.ShowDialog(this);
+
+            if (inventory.Item != null)
+                lblWeapon.Text = inventory.Item.ToString();
+            else
+                lblWeapon.Text = "n/a";
         }
 
         private void Fillup()
@@ -99,6 +106,11 @@ namespace Projektarbete
             lblChC.Text = Game.Player.CriticalHitChance.ToString();
 
                 
+
+        }
+
+        private void lblInventory_Click(object sender, EventArgs e)
+        {
 
         }
 
