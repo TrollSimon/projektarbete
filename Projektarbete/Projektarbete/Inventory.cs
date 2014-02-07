@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projektarbete.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,10 +22,10 @@ namespace Projektarbete
             foreach ( Item item in Game.Player.Inventory)
             {
                 ListViewItem list = lstInventory.Items.Add(item.Name);
-                list.SubItems.Add(item.Health);
-                list.SubItems.Add(item.AttakPower);
-                list.SubItems.Add(item.Speed);
-                list.SubItems.Add(item.CriticalHitChance);
+                list.SubItems.Add(item.Health.ToString());
+                list.SubItems.Add(item.AttackPower.ToString());
+                list.SubItems.Add(item.Speed.ToString());
+                list.SubItems.Add(item.CriticalHitChance.ToString());
             }
             
         }

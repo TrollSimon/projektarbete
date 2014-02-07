@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblInventory = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
@@ -62,7 +63,6 @@
             this.lblAnswer2 = new System.Windows.Forms.Label();
             this.lblAnswer3 = new System.Windows.Forms.Label();
             this.txtEvents = new System.Windows.Forms.TextBox();
-            this.lblInventory = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picWeapon)).BeginInit();
@@ -83,6 +83,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(303, 296);
             this.panel1.TabIndex = 0;
+            // 
+            // lblInventory
+            // 
+            this.lblInventory.AutoSize = true;
+            this.lblInventory.Location = new System.Drawing.Point(12, 50);
+            this.lblInventory.Name = "lblInventory";
+            this.lblInventory.Padding = new System.Windows.Forms.Padding(0, 0, 225, 210);
+            this.lblInventory.Size = new System.Drawing.Size(249, 223);
+            this.lblInventory.TabIndex = 4;
+            this.lblInventory.Text = "n/a";
             // 
             // label4
             // 
@@ -132,9 +142,9 @@
             this.lblWeapon.ForeColor = System.Drawing.Color.White;
             this.lblWeapon.Location = new System.Drawing.Point(115, 326);
             this.lblWeapon.Name = "lblWeapon";
-            this.lblWeapon.Size = new System.Drawing.Size(46, 20);
+            this.lblWeapon.Size = new System.Drawing.Size(32, 20);
             this.lblWeapon.TabIndex = 9;
-            this.lblWeapon.Text = "Fists";
+            this.lblWeapon.Text = "n/a";
             // 
             // lblHelmet
             // 
@@ -143,9 +153,9 @@
             this.lblHelmet.ForeColor = System.Drawing.Color.White;
             this.lblHelmet.Location = new System.Drawing.Point(115, 70);
             this.lblHelmet.Name = "lblHelmet";
-            this.lblHelmet.Size = new System.Drawing.Size(125, 20);
+            this.lblHelmet.Size = new System.Drawing.Size(32, 20);
             this.lblHelmet.TabIndex = 5;
-            this.lblHelmet.Text = "Leather Helmet";
+            this.lblHelmet.Text = "n/a";
             // 
             // picWeapon
             // 
@@ -165,9 +175,9 @@
             this.lblBoots.ForeColor = System.Drawing.Color.White;
             this.lblBoots.Location = new System.Drawing.Point(114, 262);
             this.lblBoots.Name = "lblBoots";
-            this.lblBoots.Size = new System.Drawing.Size(115, 20);
+            this.lblBoots.Size = new System.Drawing.Size(32, 20);
             this.lblBoots.TabIndex = 8;
-            this.lblBoots.Text = "Leather Boots";
+            this.lblBoots.Text = "n/a";
             // 
             // pictureBox4
             // 
@@ -196,9 +206,9 @@
             this.lblPants.ForeColor = System.Drawing.Color.White;
             this.lblPants.Location = new System.Drawing.Point(115, 198);
             this.lblPants.Name = "lblPants";
-            this.lblPants.Size = new System.Drawing.Size(114, 20);
+            this.lblPants.Size = new System.Drawing.Size(32, 20);
             this.lblPants.TabIndex = 7;
-            this.lblPants.Text = "Leather Pants";
+            this.lblPants.Text = "n/a";
             // 
             // pictureBox2
             // 
@@ -227,9 +237,9 @@
             this.lblChest.ForeColor = System.Drawing.Color.White;
             this.lblChest.Location = new System.Drawing.Point(115, 134);
             this.lblChest.Name = "lblChest";
-            this.lblChest.Size = new System.Drawing.Size(115, 20);
+            this.lblChest.Size = new System.Drawing.Size(32, 20);
             this.lblChest.TabIndex = 6;
-            this.lblChest.Text = "Leather Chest";
+            this.lblChest.Text = "n/a";
             // 
             // panel3
             // 
@@ -299,9 +309,9 @@
             this.lblChC.ForeColor = System.Drawing.Color.White;
             this.lblChC.Location = new System.Drawing.Point(239, 316);
             this.lblChC.Name = "lblChC";
-            this.lblChC.Size = new System.Drawing.Size(20, 22);
+            this.lblChC.Size = new System.Drawing.Size(34, 22);
             this.lblChC.TabIndex = 10;
-            this.lblChC.Text = "2";
+            this.lblChC.Text = "n/a";
             // 
             // lblAtkS
             // 
@@ -311,9 +321,9 @@
             this.lblAtkS.ForeColor = System.Drawing.Color.White;
             this.lblAtkS.Location = new System.Drawing.Point(239, 239);
             this.lblAtkS.Name = "lblAtkS";
-            this.lblAtkS.Size = new System.Drawing.Size(20, 22);
+            this.lblAtkS.Size = new System.Drawing.Size(34, 22);
             this.lblAtkS.TabIndex = 9;
-            this.lblAtkS.Text = "5";
+            this.lblAtkS.Text = "n/a";
             // 
             // lblAtkP
             // 
@@ -323,9 +333,9 @@
             this.lblAtkP.ForeColor = System.Drawing.Color.White;
             this.lblAtkP.Location = new System.Drawing.Point(239, 143);
             this.lblAtkP.Name = "lblAtkP";
-            this.lblAtkP.Size = new System.Drawing.Size(29, 22);
+            this.lblAtkP.Size = new System.Drawing.Size(34, 22);
             this.lblAtkP.TabIndex = 8;
-            this.lblAtkP.Text = "10";
+            this.lblAtkP.Text = "n/a";
             // 
             // lblHealth
             // 
@@ -335,9 +345,9 @@
             this.lblHealth.ForeColor = System.Drawing.Color.White;
             this.lblHealth.Location = new System.Drawing.Point(239, 59);
             this.lblHealth.Name = "lblHealth";
-            this.lblHealth.Size = new System.Drawing.Size(38, 22);
+            this.lblHealth.Size = new System.Drawing.Size(33, 22);
             this.lblHealth.TabIndex = 7;
-            this.lblHealth.Text = "200";
+            this.lblHealth.Text = "n/a";
             // 
             // label3
             // 
@@ -429,9 +439,9 @@
             this.lblAnswer1.ForeColor = System.Drawing.Color.White;
             this.lblAnswer1.Location = new System.Drawing.Point(484, 510);
             this.lblAnswer1.Name = "lblAnswer1";
-            this.lblAnswer1.Size = new System.Drawing.Size(51, 13);
+            this.lblAnswer1.Size = new System.Drawing.Size(24, 13);
             this.lblAnswer1.TabIndex = 7;
-            this.lblAnswer1.Text = "Answer 1";
+            this.lblAnswer1.Text = "n/a";
             // 
             // lblAnswer2
             // 
@@ -439,9 +449,9 @@
             this.lblAnswer2.ForeColor = System.Drawing.Color.White;
             this.lblAnswer2.Location = new System.Drawing.Point(484, 571);
             this.lblAnswer2.Name = "lblAnswer2";
-            this.lblAnswer2.Size = new System.Drawing.Size(51, 13);
+            this.lblAnswer2.Size = new System.Drawing.Size(24, 13);
             this.lblAnswer2.TabIndex = 8;
-            this.lblAnswer2.Text = "Answer 2";
+            this.lblAnswer2.Text = "n/a";
             // 
             // lblAnswer3
             // 
@@ -449,9 +459,9 @@
             this.lblAnswer3.ForeColor = System.Drawing.Color.White;
             this.lblAnswer3.Location = new System.Drawing.Point(484, 635);
             this.lblAnswer3.Name = "lblAnswer3";
-            this.lblAnswer3.Size = new System.Drawing.Size(51, 13);
+            this.lblAnswer3.Size = new System.Drawing.Size(24, 13);
             this.lblAnswer3.TabIndex = 9;
-            this.lblAnswer3.Text = "Answer 3";
+            this.lblAnswer3.Text = "n/a";
             // 
             // txtEvents
             // 
@@ -463,16 +473,6 @@
             this.txtEvents.ReadOnly = true;
             this.txtEvents.Size = new System.Drawing.Size(584, 465);
             this.txtEvents.TabIndex = 10;
-            // 
-            // lblInventory
-            // 
-            this.lblInventory.AutoSize = true;
-            this.lblInventory.Location = new System.Drawing.Point(12, 50);
-            this.lblInventory.Name = "lblInventory";
-            this.lblInventory.Padding = new System.Windows.Forms.Padding(0, 0, 225, 210);
-            this.lblInventory.Size = new System.Drawing.Size(276, 223);
-            this.lblInventory.TabIndex = 4;
-            this.lblInventory.Text = "Inventory";
             // 
             // GUI
             // 

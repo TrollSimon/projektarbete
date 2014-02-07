@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Projektarbete
+namespace Projektarbete.Data
 {
     class Choice
     {
@@ -18,12 +18,6 @@ namespace Projektarbete
             }
         }
 
-        public Choice(string description)
-        {
-            this.description = description;
-
-        }
-
         int eventID;
         public int EventID
         {
@@ -33,8 +27,9 @@ namespace Projektarbete
               }
         }
 
-        public Choice(int eventID)
+        public Choice(string description, int eventID)
         {
+            this.description = description;
             this.eventID = eventID;
         }
     }

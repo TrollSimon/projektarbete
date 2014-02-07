@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projektarbete.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,7 +16,7 @@ namespace Projektarbete
         public GUI()
         {
             InitializeComponent();
-
+            Fillup();
         }
 
         private void btnAnswer1_Click(object sender, EventArgs e)
@@ -53,9 +54,9 @@ namespace Projektarbete
             else
                 lblHealth.ForeColor = Color.White;
 
-            if (Game.Player.AttakPower > Game.Player.BaseAttakPower)
+            if (Game.Player.AttackPower > Game.Player.BaseAttackPower)
                 lblAtkP.ForeColor = Color.Green;
-            else if (Game.Player.AttakPower < Game.Player.BaseAttakPower)
+            else if (Game.Player.AttackPower < Game.Player.BaseAttackPower)
                 lblAtkP.ForeColor = Color.Red;
             else
                 lblAtkP.ForeColor = Color.White;
@@ -93,7 +94,7 @@ namespace Projektarbete
                 lblAnswer3.Visible = true;
 
             lblHealth.Text = Game.Player.Health.ToString();
-            lblAtkP.Text = Game.Player.AttakPower.ToString();
+            lblAtkP.Text = Game.Player.AttackPower.ToString();
             lblAtkS.Text = Game.Player.Speed.ToString();
             lblChC.Text = Game.Player.CriticalHitChance.ToString();
 

@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace Projektarbete
+namespace Projektarbete.Data
 {
     enum Stat
     {

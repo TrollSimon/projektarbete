@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Projektarbete
+namespace Projektarbete.Data
 {
     class Character
     {
@@ -18,18 +18,18 @@ namespace Projektarbete
         {
             get
             {
-                return stats[Stat.Health];
+                return stats.ContainsKey(Stat.Health) ? stats[Stat.Health] : 0;
             }
             private set
             {
                 stats[Stat.Health] = value;
             }
         }
-        public virtual int AttakPower 
+        public virtual int AttackPower 
         {
             get
             {
-                return stats[Stat.AttackPower];
+                return stats.ContainsKey(Stat.AttackPower) ? stats[Stat.AttackPower] : 0;
             }
 
             private set
@@ -41,7 +41,7 @@ namespace Projektarbete
         {
             get
             {
-                return stats[Stat.Speed];
+                return stats.ContainsKey(Stat.Speed) ? stats[Stat.Speed] : 0; ;
             }
             private set
             {
@@ -52,7 +52,7 @@ namespace Projektarbete
         {
             get
             {
-                return stats[Stat.CriticalHitChance];
+                return stats.ContainsKey(Stat.CriticalHitChance) ? stats[Stat.CriticalHitChance] : 0;
             }
             private set
             {
@@ -60,11 +60,20 @@ namespace Projektarbete
             }
         }
 
+        public Character(string name, int health, int attack, int speed, int crit)
+        {
+            Name = name;
+            Health = health;
+            AttackPower = attack;
+            Speed = speed;
+            CriticalHitChance = crit;
+        }
+        
         public void Hit(Character target)
         {
-            Dice dice = new Dice();
+            Dice dice = new Dice(10);
 
-            int power = dice.Roll() * AttakPower;
+            int power = dice.Roll() * AttackPower;
 
             double roll = dice.Roll();
             if (roll <= CriticalHitChance)
@@ -72,7 +81,7 @@ namespace Projektarbete
                 if (roll == 1)
                     roll = 1.5;
 
-                power = (int)(power + AttakPower * roll);
+                power = (int)(power + AttackPower * roll);
 
             }
 
@@ -92,7 +101,6 @@ namespace Projektarbete
         {
             Dead = true;
         }
-
 
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projektarbete.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,8 +9,11 @@ namespace Projektarbete
 {
     static class Game
     {
-       static private Player _player = new Player();
-       static private Event _event = new Event();
+        private const int startEventID = 1;
+        private const int playerCharacterID = 1;
+
+       static private Player _player = new Player(DataStore.GetCharacter(playerCharacterID));
+       static private Event _event = DataStore.GetEvent(startEventID);
 
        static public Player Player 
         {
@@ -26,10 +30,11 @@ namespace Projektarbete
             }
         }
 
-        static public void ChangeEvent(Event newEvent)
+        static public void ChangeEvent(int eventId)
         {
-            if (newEvent != null)
-                _event = newEvent;
+            Event ev = DataStore.GetEvent(eventId);
+            if (ev != null)
+                _event = ev;
 
         }
     }
