@@ -28,18 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblInventory = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lblWeapon = new System.Windows.Forms.Label();
+            this.lblHelmet = new System.Windows.Forms.Label();
+            this.picWeapon = new System.Windows.Forms.PictureBox();
+            this.lblBoots = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.lblPants = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblChest = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtCombat = new System.Windows.Forms.TextBox();
             this.lable2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.lblChC = new System.Windows.Forms.Label();
             this.lblAtkS = new System.Windows.Forms.Label();
             this.lblAtkP = new System.Windows.Forms.Label();
@@ -48,15 +55,6 @@
             this.lable4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.lblHelmet = new System.Windows.Forms.Label();
-            this.lblChest = new System.Windows.Forms.Label();
-            this.lblPants = new System.Windows.Forms.Label();
-            this.lblBoots = new System.Windows.Forms.Label();
-            this.lblWeapon = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtCombat = new System.Windows.Forms.TextBox();
             this.btnAnswer1 = new System.Windows.Forms.Button();
             this.btnAnswer2 = new System.Windows.Forms.Button();
             this.btnAnswer3 = new System.Windows.Forms.Button();
@@ -64,15 +62,16 @@
             this.lblAnswer2 = new System.Windows.Forms.Label();
             this.lblAnswer3 = new System.Windows.Forms.Label();
             this.txtEvents = new System.Windows.Forms.TextBox();
+            this.lblInventory = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picWeapon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -85,21 +84,11 @@
             this.panel1.Size = new System.Drawing.Size(303, 296);
             this.panel1.TabIndex = 0;
             // 
-            // lblInventory
-            // 
-            this.lblInventory.AutoSize = true;
-            this.lblInventory.Location = new System.Drawing.Point(12, 50);
-            this.lblInventory.Name = "lblInventory";
-            this.lblInventory.Padding = new System.Windows.Forms.Padding(0, 0, 225, 210);
-            this.lblInventory.Size = new System.Drawing.Size(276, 223);
-            this.lblInventory.TabIndex = 4;
-            this.lblInventory.Text = "Inventory";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(86, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(127, 31);
@@ -112,7 +101,7 @@
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.lblWeapon);
             this.panel2.Controls.Add(this.lblHelmet);
-            this.panel2.Controls.Add(this.pictureBox5);
+            this.panel2.Controls.Add(this.picWeapon);
             this.panel2.Controls.Add(this.lblBoots);
             this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Controls.Add(this.pictureBox3);
@@ -125,9 +114,64 @@
             this.panel2.Size = new System.Drawing.Size(303, 367);
             this.panel2.TabIndex = 1;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(70, 7);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(143, 31);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "Equipment";
+            // 
+            // lblWeapon
+            // 
+            this.lblWeapon.AutoSize = true;
+            this.lblWeapon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.lblWeapon.ForeColor = System.Drawing.Color.White;
+            this.lblWeapon.Location = new System.Drawing.Point(115, 326);
+            this.lblWeapon.Name = "lblWeapon";
+            this.lblWeapon.Size = new System.Drawing.Size(46, 20);
+            this.lblWeapon.TabIndex = 9;
+            this.lblWeapon.Text = "Fists";
+            // 
+            // lblHelmet
+            // 
+            this.lblHelmet.AutoSize = true;
+            this.lblHelmet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.lblHelmet.ForeColor = System.Drawing.Color.White;
+            this.lblHelmet.Location = new System.Drawing.Point(115, 70);
+            this.lblHelmet.Name = "lblHelmet";
+            this.lblHelmet.Size = new System.Drawing.Size(125, 20);
+            this.lblHelmet.TabIndex = 5;
+            this.lblHelmet.Text = "Leather Helmet";
+            // 
+            // picWeapon
+            // 
+            this.picWeapon.Image = global::Projektarbete.Properties.Resources.weapon;
+            this.picWeapon.Location = new System.Drawing.Point(12, 310);
+            this.picWeapon.Name = "picWeapon";
+            this.picWeapon.Size = new System.Drawing.Size(40, 40);
+            this.picWeapon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picWeapon.TabIndex = 4;
+            this.picWeapon.TabStop = false;
+            this.picWeapon.Click += new System.EventHandler(this.picWeapon_Click);
+            // 
+            // lblBoots
+            // 
+            this.lblBoots.AutoSize = true;
+            this.lblBoots.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.lblBoots.ForeColor = System.Drawing.Color.White;
+            this.lblBoots.Location = new System.Drawing.Point(114, 262);
+            this.lblBoots.Name = "lblBoots";
+            this.lblBoots.Size = new System.Drawing.Size(115, 20);
+            this.lblBoots.TabIndex = 8;
+            this.lblBoots.Text = "Leather Boots";
+            // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Image = global::Projektarbete.Properties.Resources.chest;
             this.pictureBox4.Location = new System.Drawing.Point(12, 122);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(40, 40);
@@ -137,7 +181,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Image = global::Projektarbete.Properties.Resources.legs;
             this.pictureBox3.Location = new System.Drawing.Point(12, 185);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(40, 40);
@@ -145,9 +189,20 @@
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
             // 
+            // lblPants
+            // 
+            this.lblPants.AutoSize = true;
+            this.lblPants.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.lblPants.ForeColor = System.Drawing.Color.White;
+            this.lblPants.Location = new System.Drawing.Point(115, 198);
+            this.lblPants.Name = "lblPants";
+            this.lblPants.Size = new System.Drawing.Size(114, 20);
+            this.lblPants.TabIndex = 7;
+            this.lblPants.Text = "Leather Pants";
+            // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Image = global::Projektarbete.Properties.Resources.feet;
             this.pictureBox2.Location = new System.Drawing.Point(12, 247);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(40, 40);
@@ -157,13 +212,24 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::Projektarbete.Properties.Resources.head;
             this.pictureBox1.Location = new System.Drawing.Point(12, 67);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(40, 40);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // lblChest
+            // 
+            this.lblChest.AutoSize = true;
+            this.lblChest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.lblChest.ForeColor = System.Drawing.Color.White;
+            this.lblChest.Location = new System.Drawing.Point(115, 134);
+            this.lblChest.Name = "lblChest";
+            this.lblChest.Size = new System.Drawing.Size(115, 20);
+            this.lblChest.TabIndex = 6;
+            this.lblChest.Text = "Leather Chest";
             // 
             // panel3
             // 
@@ -175,11 +241,22 @@
             this.panel3.Size = new System.Drawing.Size(303, 340);
             this.panel3.TabIndex = 2;
             // 
+            // txtCombat
+            // 
+            this.txtCombat.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtCombat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCombat.Location = new System.Drawing.Point(19, 59);
+            this.txtCombat.Multiline = true;
+            this.txtCombat.Name = "txtCombat";
+            this.txtCombat.ReadOnly = true;
+            this.txtCombat.Size = new System.Drawing.Size(258, 214);
+            this.txtCombat.TabIndex = 1;
+            // 
             // lable2
             // 
             this.lable2.AutoSize = true;
             this.lable2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lable2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lable2.ForeColor = System.Drawing.Color.White;
             this.lable2.Location = new System.Drawing.Point(79, 9);
             this.lable2.Name = "lable2";
             this.lable2.Size = new System.Drawing.Size(152, 31);
@@ -203,12 +280,23 @@
             this.panel4.Size = new System.Drawing.Size(303, 359);
             this.panel4.TabIndex = 3;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(110, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(77, 31);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Stats";
+            // 
             // lblChC
             // 
             this.lblChC.AutoSize = true;
             this.lblChC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblChC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.lblChC.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblChC.ForeColor = System.Drawing.Color.White;
             this.lblChC.Location = new System.Drawing.Point(239, 316);
             this.lblChC.Name = "lblChC";
             this.lblChC.Size = new System.Drawing.Size(20, 22);
@@ -220,7 +308,7 @@
             this.lblAtkS.AutoSize = true;
             this.lblAtkS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblAtkS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.lblAtkS.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblAtkS.ForeColor = System.Drawing.Color.White;
             this.lblAtkS.Location = new System.Drawing.Point(239, 239);
             this.lblAtkS.Name = "lblAtkS";
             this.lblAtkS.Size = new System.Drawing.Size(20, 22);
@@ -232,7 +320,7 @@
             this.lblAtkP.AutoSize = true;
             this.lblAtkP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblAtkP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.lblAtkP.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblAtkP.ForeColor = System.Drawing.Color.White;
             this.lblAtkP.Location = new System.Drawing.Point(239, 143);
             this.lblAtkP.Name = "lblAtkP";
             this.lblAtkP.Size = new System.Drawing.Size(29, 22);
@@ -244,7 +332,7 @@
             this.lblHealth.AutoSize = true;
             this.lblHealth.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblHealth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHealth.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblHealth.ForeColor = System.Drawing.Color.White;
             this.lblHealth.Location = new System.Drawing.Point(239, 59);
             this.lblHealth.Name = "lblHealth";
             this.lblHealth.Size = new System.Drawing.Size(38, 22);
@@ -256,7 +344,7 @@
             this.label3.AutoSize = true;
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(19, 316);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(168, 22);
@@ -268,7 +356,7 @@
             this.lable4.AutoSize = true;
             this.lable4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lable4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.lable4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lable4.ForeColor = System.Drawing.Color.White;
             this.lable4.Location = new System.Drawing.Point(19, 239);
             this.lable4.Name = "lable4";
             this.lable4.Size = new System.Drawing.Size(125, 22);
@@ -280,7 +368,7 @@
             this.label1.AutoSize = true;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(19, 143);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 22);
@@ -292,110 +380,12 @@
             this.label2.AutoSize = true;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(19, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 22);
             this.label2.TabIndex = 0;
             this.label2.Text = "Health :";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(12, 310);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox5.TabIndex = 4;
-            this.pictureBox5.TabStop = false;
-            // 
-            // lblHelmet
-            // 
-            this.lblHelmet.AutoSize = true;
-            this.lblHelmet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.lblHelmet.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblHelmet.Location = new System.Drawing.Point(115, 70);
-            this.lblHelmet.Name = "lblHelmet";
-            this.lblHelmet.Size = new System.Drawing.Size(125, 20);
-            this.lblHelmet.TabIndex = 5;
-            this.lblHelmet.Text = "Leather Helmet";
-            // 
-            // lblChest
-            // 
-            this.lblChest.AutoSize = true;
-            this.lblChest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.lblChest.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblChest.Location = new System.Drawing.Point(115, 134);
-            this.lblChest.Name = "lblChest";
-            this.lblChest.Size = new System.Drawing.Size(115, 20);
-            this.lblChest.TabIndex = 6;
-            this.lblChest.Text = "Leather Chest";
-            // 
-            // lblPants
-            // 
-            this.lblPants.AutoSize = true;
-            this.lblPants.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.lblPants.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblPants.Location = new System.Drawing.Point(115, 198);
-            this.lblPants.Name = "lblPants";
-            this.lblPants.Size = new System.Drawing.Size(114, 20);
-            this.lblPants.TabIndex = 7;
-            this.lblPants.Text = "Leather Pants";
-            // 
-            // lblBoots
-            // 
-            this.lblBoots.AutoSize = true;
-            this.lblBoots.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.lblBoots.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBoots.Location = new System.Drawing.Point(114, 262);
-            this.lblBoots.Name = "lblBoots";
-            this.lblBoots.Size = new System.Drawing.Size(115, 20);
-            this.lblBoots.TabIndex = 8;
-            this.lblBoots.Text = "Leather Boots";
-            // 
-            // lblWeapon
-            // 
-            this.lblWeapon.AutoSize = true;
-            this.lblWeapon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.lblWeapon.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblWeapon.Location = new System.Drawing.Point(115, 326);
-            this.lblWeapon.Name = "lblWeapon";
-            this.lblWeapon.Size = new System.Drawing.Size(46, 20);
-            this.lblWeapon.TabIndex = 9;
-            this.lblWeapon.Text = "Fists";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
-            this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(70, 7);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(143, 31);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "Equipment";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(110, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 31);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Stats";
-            // 
-            // txtCombat
-            // 
-            this.txtCombat.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtCombat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCombat.Location = new System.Drawing.Point(19, 59);
-            this.txtCombat.Multiline = true;
-            this.txtCombat.Name = "txtCombat";
-            this.txtCombat.ReadOnly = true;
-            this.txtCombat.Size = new System.Drawing.Size(258, 214);
-            this.txtCombat.TabIndex = 1;
             // 
             // btnAnswer1
             // 
@@ -436,7 +426,7 @@
             // lblAnswer1
             // 
             this.lblAnswer1.AutoSize = true;
-            this.lblAnswer1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblAnswer1.ForeColor = System.Drawing.Color.White;
             this.lblAnswer1.Location = new System.Drawing.Point(484, 510);
             this.lblAnswer1.Name = "lblAnswer1";
             this.lblAnswer1.Size = new System.Drawing.Size(51, 13);
@@ -446,7 +436,7 @@
             // lblAnswer2
             // 
             this.lblAnswer2.AutoSize = true;
-            this.lblAnswer2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblAnswer2.ForeColor = System.Drawing.Color.White;
             this.lblAnswer2.Location = new System.Drawing.Point(484, 571);
             this.lblAnswer2.Name = "lblAnswer2";
             this.lblAnswer2.Size = new System.Drawing.Size(51, 13);
@@ -456,7 +446,7 @@
             // lblAnswer3
             // 
             this.lblAnswer3.AutoSize = true;
-            this.lblAnswer3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblAnswer3.ForeColor = System.Drawing.Color.White;
             this.lblAnswer3.Location = new System.Drawing.Point(484, 635);
             this.lblAnswer3.Name = "lblAnswer3";
             this.lblAnswer3.Size = new System.Drawing.Size(51, 13);
@@ -474,7 +464,17 @@
             this.txtEvents.Size = new System.Drawing.Size(584, 465);
             this.txtEvents.TabIndex = 10;
             // 
-            // Form1
+            // lblInventory
+            // 
+            this.lblInventory.AutoSize = true;
+            this.lblInventory.Location = new System.Drawing.Point(12, 50);
+            this.lblInventory.Name = "lblInventory";
+            this.lblInventory.Padding = new System.Windows.Forms.Padding(0, 0, 225, 210);
+            this.lblInventory.Size = new System.Drawing.Size(276, 223);
+            this.lblInventory.TabIndex = 4;
+            this.lblInventory.Text = "Inventory";
+            // 
+            // GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -492,13 +492,15 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Name = "Form1";
+            this.Name = "GUI";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picWeapon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -507,7 +509,6 @@
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -528,13 +529,12 @@
         private System.Windows.Forms.Label lblHealth;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lable4;
-        private System.Windows.Forms.Label lblInventory;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox picWeapon;
         private System.Windows.Forms.Label lblWeapon;
         private System.Windows.Forms.Label lblHelmet;
         private System.Windows.Forms.Label lblBoots;
@@ -550,6 +550,7 @@
         private System.Windows.Forms.Label lblAnswer2;
         private System.Windows.Forms.Label lblAnswer3;
         private System.Windows.Forms.TextBox txtEvents;
+        private System.Windows.Forms.Label lblInventory;
 
 
 
