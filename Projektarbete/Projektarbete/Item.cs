@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Projektarbete
 {
-    class Item
+    public class Item
     {
     }
 }
