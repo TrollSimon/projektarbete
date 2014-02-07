@@ -44,6 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Choice.cs" />
+    <Compile Include="Dice.cs" />
     <Compile Include="GUI.cs">
       <SubType>Form</SubType>
     </Compile>
