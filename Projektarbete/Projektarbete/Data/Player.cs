@@ -8,7 +8,7 @@ namespace Projektarbete.Data
 {
     class Player : Character
     {
-        public Item Weapon { get; set; }
+        public Item Weapon { get; private set; }
         public List<Item> Inventory { get; private set; }
 
         public int BaseHealth
@@ -48,6 +48,9 @@ namespace Projektarbete.Data
         {
             get
             {
+                if (Weapon == null)
+                    return base.Health;
+
                 return Weapon.Health + base.Health;
             }
         }
@@ -55,6 +58,9 @@ namespace Projektarbete.Data
         {
             get
             {
+                if (Weapon == null)
+                    return base.AttackPower;
+
                 return Weapon.AttackPower + base.AttackPower;
             }
         }
@@ -62,6 +68,9 @@ namespace Projektarbete.Data
         {
             get
             {
+                if (Weapon == null)
+                    return base.Speed;
+
                 return Weapon.Speed + base.Speed;
             }
         }
@@ -69,6 +78,9 @@ namespace Projektarbete.Data
         {
             get
             {
+                if (Weapon == null)
+                    return base.CriticalHitChance;
+
                 return Weapon.CriticalHitChance + base.CriticalHitChance;
             }
         }
@@ -79,7 +91,6 @@ namespace Projektarbete.Data
         public Player(string name, int health, int attack, int speed, int crit)
             : base(name, health, attack, speed, crit)
         {
-            Weapon = new Item("Unarmed", "", 0, 0, 0, 0);
             Inventory = new List<Item>();
         }
 

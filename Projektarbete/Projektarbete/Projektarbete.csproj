@@ -62,7 +62,6 @@
     <Compile Include="Data\Character.cs" />
     <Compile Include="Data\Choice.cs" />
     <Compile Include="Data\DataStore.cs" />
-    <Compile Include="Data\Stat.cs" />
     <Compile Include="Dice.cs" />
     <Compile Include="Data\Event.cs" />
     <Compile Include="Game.cs" />

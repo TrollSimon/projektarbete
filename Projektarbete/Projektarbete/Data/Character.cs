@@ -8,57 +8,14 @@ namespace Projektarbete.Data
 {
     class Character
     {
-        private Dictionary<Stat, int> stats = new Dictionary<Stat, int>();
-
         public string Name { get; private set; }
         public int CurrentHealth { get; private set; }
         public bool Dead { get; private set; }
 
-        public virtual int Health
-        {
-            get
-            {
-                return stats.ContainsKey(Stat.Health) ? stats[Stat.Health] : 0;
-            }
-            private set
-            {
-                stats[Stat.Health] = value;
-            }
-        }
-        public virtual int AttackPower 
-        {
-            get
-            {
-                return stats.ContainsKey(Stat.AttackPower) ? stats[Stat.AttackPower] : 0;
-            }
-
-            private set
-            {
-                stats[Stat.Health] = value;
-            }
-        }
-        public virtual int Speed 
-        {
-            get
-            {
-                return stats.ContainsKey(Stat.Speed) ? stats[Stat.Speed] : 0; ;
-            }
-            private set
-            {
-                stats[Stat.Speed] = value;
-            }
-        }
-        public virtual int CriticalHitChance 
-        {
-            get
-            {
-                return stats.ContainsKey(Stat.CriticalHitChance) ? stats[Stat.CriticalHitChance] : 0;
-            }
-            private set
-            {
-                stats[Stat.CriticalHitChance] = value;
-            }
-        }
+        public virtual int Health { get; private set; }
+        public virtual int AttackPower { get; private set; }
+        public virtual int Speed { get; private set; }
+        public virtual int CriticalHitChance { get; private set; }
 
         public Character(string name, int health, int attack, int speed, int crit)
         {
