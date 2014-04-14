@@ -168,6 +168,8 @@
             this.picWeapon.TabIndex = 4;
             this.picWeapon.TabStop = false;
             this.picWeapon.Click += new System.EventHandler(this.picWeapon_Click);
+            this.picWeapon.MouseLeave += new System.EventHandler(this.picWeapon_MouseLeave);
+            this.picWeapon.MouseHover += new System.EventHandler(this.picWeapon_MouseHover);
             // 
             // lblBoots
             // 
@@ -468,6 +470,7 @@
             // 
             this.txtEvents.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtEvents.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEvents.ForeColor = System.Drawing.SystemColors.Window;
             this.txtEvents.Location = new System.Drawing.Point(341, 12);
             this.txtEvents.Multiline = true;
             this.txtEvents.Name = "txtEvents";

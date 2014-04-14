@@ -16,7 +16,7 @@ namespace Projektarbete
         public GUI()
         {
             InitializeComponent();
-            Game.Player.Inventory.Add(new Item("Test", "", 0, 0, 0, 0));
+            Game.Player.Inventory.Add(new Item("Test", "", 20, -1, 0, 0));
             Fillup();
             
         }
@@ -45,7 +45,10 @@ namespace Projektarbete
                 lblWeapon.Text = inventory.Item.ToString();
             else
                 lblWeapon.Text = "n/a";
+
+            Fillstats();
         }
+
 
         private void Fillup()
         {
@@ -54,34 +57,7 @@ namespace Projektarbete
 
             txtEvents.AppendText(Game.Event.Description);
 
-            if (Game.Player.Health > Game.Player.BaseHealth)
-                lblHealth.ForeColor = Color.Green;
-            else if (Game.Player.Health < Game.Player.BaseHealth)
-                lblHealth.ForeColor = Color.Red;
-            else
-                lblHealth.ForeColor = Color.White;
-
-            if (Game.Player.AttackPower > Game.Player.BaseAttackPower)
-                lblAtkP.ForeColor = Color.Green;
-            else if (Game.Player.AttackPower < Game.Player.BaseAttackPower)
-                lblAtkP.ForeColor = Color.Red;
-            else
-                lblAtkP.ForeColor = Color.White;
-
-            if (Game.Player.Speed > Game.Player.BaseSpeed)
-                lblAtkS.ForeColor = Color.Green;
-            else if (Game.Player.Speed < Game.Player.BaseSpeed)
-                lblAtkS.ForeColor = Color.Red;
-            else
-                lblAtkS.ForeColor = Color.White;
-            
-            if (Game.Player.CriticalHitChance > Game.Player.BaseCriticalHitChance)
-                lblChC.ForeColor = Color.Green;
-            else if (Game.Player.CriticalHitChance < Game.Player.BaseCriticalHitChance)
-                lblAtkS.ForeColor = Color.Red;
-            else
-                lblAtkS.ForeColor = Color.White;
-           
+            Fillstats();
 
             lblAnswer1.Text = Game.Event.GetChoice(0);
             lblAnswer2.Text = Game.Event.GetChoice(1);
@@ -112,6 +88,48 @@ namespace Projektarbete
         private void lblInventory_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Fillstats()
+        {
+            if (Game.Player.Health > Game.Player.BaseHealth)
+                lblHealth.ForeColor = Color.Green;
+            else if (Game.Player.Health < Game.Player.BaseHealth)
+                lblHealth.ForeColor = Color.Red;
+            else
+                lblHealth.ForeColor = Color.White;
+
+            if (Game.Player.AttackPower > Game.Player.BaseAttackPower)
+                lblAtkP.ForeColor = Color.Green;
+            else if (Game.Player.AttackPower < Game.Player.BaseAttackPower)
+                lblAtkP.ForeColor = Color.Red;
+            else
+                lblAtkP.ForeColor = Color.White;
+
+            if (Game.Player.Speed > Game.Player.BaseSpeed)
+                lblAtkS.ForeColor = Color.Green;
+            else if (Game.Player.Speed < Game.Player.BaseSpeed)
+                lblAtkS.ForeColor = Color.Red;
+            else
+                lblAtkS.ForeColor = Color.White;
+
+            if (Game.Player.CriticalHitChance > Game.Player.BaseCriticalHitChance)
+                lblChC.ForeColor = Color.Green;
+            else if (Game.Player.CriticalHitChance < Game.Player.BaseCriticalHitChance)
+                lblAtkS.ForeColor = Color.Red;
+            else
+                lblAtkS.ForeColor = Color.White;
+           
+        }
+
+        private void picWeapon_MouseHover(object sender, EventArgs e)
+        {
+            this.picWeapon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+        }
+
+        private void picWeapon_MouseLeave(object sender, EventArgs e)
+        {
+            this.picWeapon.BorderStyle = System.Windows.Forms.BorderStyle.None;
         }
 
 
