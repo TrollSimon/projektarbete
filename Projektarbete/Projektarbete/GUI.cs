@@ -23,17 +23,32 @@ namespace Projektarbete
 
         private void btnAnswer1_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                Game.Event.MakeChoice(0);
+                Fillup();
+            }
+            catch (ArgumentOutOfRangeException) { }
         }
 
         private void btnAnswer2_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                Game.Event.MakeChoice(1);
+                Fillup();
+            }
+            catch (ArgumentOutOfRangeException) { }
         }
 
         private void btnAnswer3_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                Game.Event.MakeChoice(2);
+                Fillup();
+            }
+            catch (ArgumentOutOfRangeException) { }
         }
 
         private void picWeapon_Click(object sender, EventArgs e)
@@ -52,29 +67,52 @@ namespace Projektarbete
 
         private void Fillup()
         {
+            lblInventory.Text = "";
             foreach (Item item in Game.Player.Inventory)
                 lblInventory.Text += item.ToString();
 
-            txtEvents.AppendText(Game.Event.Description);
+            txtEvents.AppendText(Game.Event.Description + Environment.NewLine + Environment.NewLine + Environment.NewLine);
 
             Fillstats();
 
-            lblAnswer1.Text = Game.Event.GetChoice(0);
-            lblAnswer2.Text = Game.Event.GetChoice(1);
-            lblAnswer3.Text = Game.Event.GetChoice(2);
-
-            if (Game.Event.GetChoice(0) == "")
-                lblAnswer1.Visible = false;
-            else
+            try
+            {
+                string choice = Game.Event.GetChoice(0);
+                lblAnswer1.Text = choice;
                 lblAnswer1.Visible = true;
-            if (Game.Event.GetChoice(1) == "")
-                lblAnswer2.Visible = false;
-            else
+                btnAnswer1.Visible = true;
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                lblAnswer1.Visible = false;
+                btnAnswer1.Visible = false;
+            }
+
+            try
+            {
+                string choice = Game.Event.GetChoice(1);
+                lblAnswer2.Text = choice;
                 lblAnswer2.Visible = true;
-            if (Game.Event.GetChoice(2)== "")
-                lblAnswer3.Visible = false;
-            else 
+                btnAnswer2.Visible = true;
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                lblAnswer2.Visible = false;
+                btnAnswer2.Visible = false;
+            }
+
+            try
+            {
+                string choice = Game.Event.GetChoice(2);
+                lblAnswer3.Text = choice;
                 lblAnswer3.Visible = true;
+                btnAnswer3.Visible = true;
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                lblAnswer3.Visible = false;
+                btnAnswer3.Visible = false;
+            }
 
             lblHealth.Text = Game.Player.Health.ToString();
             lblAtkP.Text = Game.Player.AttackPower.ToString();

@@ -66,7 +66,7 @@ namespace Projektarbete.Data
             {
                 connection.Open();
 
-                string sql = "SELECT Event.Description, EventChoice.Description, Target FROM Event INNER JOIN EventChoice ON ID = Source WHERE ID = @id";
+                string sql = "SELECT Event.Description, EventChoice.Description, Target FROM Event LEFT JOIN EventChoice ON ID = Source WHERE ID = @id";
 
                 SqlCommand command = new SqlCommand(sql, connection);
                 command.Parameters.AddWithValue("@id", id);
@@ -77,7 +77,12 @@ namespace Projektarbete.Data
                 while (reader.Read())
                 {
                     desc = reader.GetString(0);
-                    choices.Add(new Choice(reader.GetString(1), reader.GetInt32(2)));
+
+                    try
+                    {
+                        choices.Add(new Choice(reader.GetString(1), reader.GetInt32(2)));
+                    }
+                    catch (Exception) { }
                 }
 
                 evnt = new Event(desc, choices);

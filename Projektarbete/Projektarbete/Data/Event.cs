@@ -21,6 +21,8 @@ namespace Projektarbete.Data
         {
             if (choice < choices.Count && choice > -1)
                 Game.ChangeEvent(choices.ElementAt(choice).EventID);
+            else
+                throw new ArgumentOutOfRangeException();
         }
 
         public string GetChoice(int choice)
@@ -28,7 +30,7 @@ namespace Projektarbete.Data
             if (choice < choices.Count && choice > -1)
                 return choices.ElementAt(choice).Description;
             else
-                return "";
+                throw new ArgumentOutOfRangeException();
         }
     }
 }
